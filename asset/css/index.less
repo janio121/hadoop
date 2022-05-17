@@ -1,0 +1,111 @@
+@headerHeight: 60px;
+
+body {
+    overflow: hidden;
+    background-color: #F2F3F5;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+header {
+    padding: 0 30px;
+    height: @headerHeight;
+    background-color: #000;
+
+    &>img {
+        float: left;
+    }
+
+    .header-right {
+        float: right;
+        height: 100%;
+
+        ul {
+            height: 60px;
+            background-color: #000;
+            box-sizing: border-box;
+        }
+    }
+}
+
+nav {
+    ul {
+        top: @headerHeight  !important;
+        border-radius: 0 !important;
+
+        li:first-child a {
+            height: @headerHeight  !important;
+            line-height: @headerHeight  !important;
+        }
+
+        dd {
+            padding-left: 20px;
+        }
+    }
+}
+
+section {
+    padding: 20px 0 0 200px;
+    height: 650px;
+    overflow: auto;
+
+    .top_data {
+        padding: 0 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .data_item {
+        position: relative;
+        width: 290px;
+        height: 100px;
+        border: 1px solid #e7e7e9;
+        box-sizing: border-box;
+        background-color: #fff;
+        text-align: center;
+        margin-bottom: 15px;
+
+        h2 {
+            display: inline-block;
+            font-size: 50px;
+            height: 76px;
+            line-height: 76px;
+            margin-left: 20px;
+        }
+
+        span {
+            font-size: 14px;
+            margin-left: 6px;
+        }
+
+        p {
+            position: absolute;
+            width: 100%;
+            height: 24px;
+            line-height: 24px;
+            bottom: 0;
+            background-color: #e5e5e5;
+            color: #333;
+        }
+    }
+
+    .data_item:nth-child(1) {
+        color: rgb(206, 88, 206);
+    }
+
+    .data_item:nth-child(2) {
+        color: #83a2ed;
+    }
+
+    .data_item:nth-child(3) {
+        color: #83a2ed;
+
+    }
+
+    .data_item:nth-child(4) {
+        color: #58d88e;
+    }
+}

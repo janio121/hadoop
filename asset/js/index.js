@@ -8,6 +8,14 @@ $(function() {
             layer.close(index);
         });
     })
+    $(".basics").on("click", function() {
+        $("#content").attr("src", "../../home/user.html");
+
+    });
+    $(".home").on("click", function() {
+        $("#content").attr("src", "../../home/echarts.html");
+
+    })
 });
 //获取用户信息
 function getUserInfo() {
@@ -17,19 +25,13 @@ function getUserInfo() {
         url: '/my/userinfo',
 
         success: function(res) {
-            console.log(res);
             if (res.status !== 0) {
                 return layui.layer.msg("获取用户信息失败！")
             }
             //渲染头像
             renderAvatar(res.data);
         },
-        complete: function(res) {
-            if (res.responseJSON.status === 1 && res.responseJSON.message === "身份认证失败！") {
-                localStorage.removeItem("token");
-                location.href = "../../login.html";
-            }
-        }
+
     })
 }
 
@@ -39,6 +41,6 @@ function renderAvatar(user) {
     // 设置欢迎名称
     $(".username").text(name);
     if (user.user_pic !== null) {
-        $(".layui-nav-img")[0].src = user.user_pic;
+        $(".layui-nav-img").attr("src", user.user_pic);
     }
 }

@@ -9,7 +9,7 @@ $(function() {
         });
     })
     $(".basics").on("click", function() {
-        $("#content").attr("src", "../../home/user.html");
+        $("#content").attr("src", "../../user/user.html");
 
     });
     $(".home").on("click", function() {
